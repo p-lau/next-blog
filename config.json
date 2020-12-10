@@ -3,16 +3,15 @@
   "site_title": "plau",
   "site_description": "Personal site",
   "site_keywords": [
-    {
-      "keyword": "React"
-    },
+    "Programming",
+    "Gaming",
+    "React",
     {
       "keyword": "Next.js"
     },
     {
       "keyword": "Netlify"
-    },
-    "Gaming"
+    }
   ],
   "posts_per_page": 5,
   "twitter_account": "@LauPanhavuth",
