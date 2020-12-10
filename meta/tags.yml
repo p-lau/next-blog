@@ -9,3 +9,5 @@ tags:
     name: Technology
   - slug: projects
     name: Project
+  - slug: personal
+    name: Personal
