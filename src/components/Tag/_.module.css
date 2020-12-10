@@ -1,0 +1,47 @@
+/* Tag Button */
+.tag {
+    display: inline-block;
+    border-radius: 3px;
+    background-color: rgba(21, 132, 125, 0.2);
+    color: #15847d;
+    transition: background-color 0.3s ease;
+    padding: 0.25em 0.5em;
+}
+.tag:active,
+.tag:hover {
+    background-color: rgba(21, 132, 125, 0.4);
+}
+/* Tag Post */
+.tagPost {
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+.tagPost h1 {
+    margin: 0 0 2rem;
+    padding: 0;
+    font-weight: 100;
+    font-size: 1.75rem;
+    color: #9b9b9b;
+}
+.tagPost h1 span {
+    font-weight: bold;
+    color: #222;
+}
+.tagPost ul {
+    margin: 0;
+    padding: 0;
+    flex: 1 0 auto;
+}
+.tagPost li {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+@media (orientation: landscape){
+    .tagPost h1 {
+        font-size: 2rem;
+    }
+}

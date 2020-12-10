@@ -1,11 +1,10 @@
 .content {
   font-family: "Ubuntu", sans-serif;
-  color: #222;
   font-weight: 200;
 }
 
 .content time {
-  color: #9b9b9b;
+  color: currentColor;
 }
 
 .content p {
@@ -128,7 +127,7 @@
   width: 100%;
 }
 
-@media (min-width: 769px) {
+@media (orientation: portrait) {
   .content h2,
   .content h3,
   .content h4,

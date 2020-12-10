@@ -1,0 +1,30 @@
+/* Layout */
+.dark {
+    --inactive: gray;
+    --active: white;
+    --background: #012;
+    background: var(--background);
+    color: white;
+}
+
+.layout {
+    display: block;
+    padding: 4rem 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.layout main {
+    display: flex;
+    min-height: 100%;
+}
+
+@media (orientation: landscape) {
+    .layout {
+        display: flex;
+        flex: 1 0 auto;
+    }
+    .layout main {
+        flex: 1 0 auto;
+    }
+}

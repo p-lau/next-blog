@@ -1,0 +1,16 @@
+/* Pagination */
+.pag {
+    list-style: none;
+    margin: 3rem 0 0 0 !important;
+    padding: 0 !important;
+}
+.pag li {
+    display: inline-block;
+    margin-right: 1em;
+    color: #9b9b9b;
+    font-size: 1.25rem;
+}
+.pagActive {
+    color: #222;
+    font-weight: bold;
+}

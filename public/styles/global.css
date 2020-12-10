@@ -1,13 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap");
 
+
 html,
 body {
   font-family: "Ubuntu", sans-serif;
-  background-color: #fff;
   color: #222;
   font-weight: 200;
   height: 100%;
+  --background: white;
+  --active: black;
+  background-color: var(--background);
 }
 
 #__next {
@@ -22,7 +25,7 @@ a {
 
 a:active,
 a:hover {
-  color: #000;
+  color: dodgerblue;
 }
 
 .youtube-container {
@@ -40,4 +43,8 @@ a:hover {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  color: currentColor;
 }

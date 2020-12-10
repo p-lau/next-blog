@@ -1,0 +1,47 @@
+/* Post Item */
+.item {
+    color: currentColor;
+    display: inline-block;
+}
+.item > h2 {
+    margin: 0;
+    font-weight: 500;
+}
+/* Post List */
+.post {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 1.5rem;
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.postList {
+    margin: 0;
+    padding: 0;
+    flex: 1 0 auto;
+}
+
+.postList > li {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.categories {
+    display: none;
+}
+.categories > li {
+    list-style: none;
+    margin-bottom: 0.75em;
+}
+@media (orientation: landscape) {
+    .categories {
+        display: block;
+    }
+}

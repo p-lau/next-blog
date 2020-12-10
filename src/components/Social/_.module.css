@@ -1,0 +1,7 @@
+/* Social List */
+.social a {
+    display: inline-block;
+}
+.social a:not(:last-child) {
+    margin-right: 2em;
+}

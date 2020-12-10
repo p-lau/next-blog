@@ -1,31 +1,29 @@
-import { GetStaticPaths, GetStaticProps } from "next";
-import Layout from "../../../components/Layout";
-import BasicMeta from "../../../components/meta/BasicMeta";
-import OpenGraphMeta from "../../../components/meta/OpenGraphMeta";
-import TwitterCardMeta from "../../../components/meta/TwitterCardMeta";
-import TagPostList from "../../../components/TagPostList";
-import config from "../../../lib/config";
-import { countPosts, listPostContent, PostContent } from "../../../lib/posts";
-import { getTag, listTags, TagContent } from "../../../lib/tags";
-import Head from "next/head";
+import { GetStaticPaths, GetStaticProps } from "next"
+import Layout from "../../../components/Layout"
+import {Basic, Twitter, Open} from "../../../components/meta"
+import TagPostList from "../../../components/Tag/PostList"
+import config from "../../../lib/config"
+import { countPosts, listPostContent, PostContent } from "../../../lib/posts"
+import { getTag, listTags, TagContent } from "../../../lib/tags"
 
 type Props = {
-  posts: PostContent[];
-  tag: TagContent;
-  page?: string;
+  posts: PostContent[]
+  tag: TagContent
+  page?: string
   pagination: {
-    current: number;
-    pages: number;
-  };
-};
+    current: number
+    pages: number
+  }
+}
+
 export default function Index({ posts, tag, pagination, page }: Props) {
-  const url = `/posts/tags/${tag.name}` + (page ? `/${page}` : "");
-  const title = tag.name;
+  const url = `/posts/tags/${tag.name}` + (page ? `/${page}` : "")
+  const title = tag.name
   return (
     <Layout>
-      <BasicMeta url={url} title={title} />
-      <OpenGraphMeta url={url} title={title} />
-      <TwitterCardMeta url={url} title={title} />
+      <Basic url={url} title={title} />
+      <Open url={url} title={title} />
+      <Twitter url={url} title={title} />
       <TagPostList posts={posts} tag={tag} pagination={pagination} />
     </Layout>
   );
