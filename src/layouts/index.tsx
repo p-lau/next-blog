@@ -16,6 +16,7 @@ type Props = {
 	slug: string
 	description: string
 	tags: string[]
+	image: string
 	author: string
 }
 
@@ -25,6 +26,7 @@ export default function Index({
 	slug,
 	author,
 	tags,
+	image,
 	description,
 }: Props) {
 	const keywords = tags.map((it) => getTag(it).name);
@@ -38,6 +40,7 @@ export default function Index({
 					keywords={keywords}
 					date={date}
 					author={authorName}
+					image={image}
 					description={description}
 				/>
 				<div className={"container"}>
