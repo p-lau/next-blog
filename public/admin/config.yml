@@ -1,16 +1,16 @@
 backend:
-  name: git-gateway
-  branch: master
-media_folder: public/images
-public_folder: /images
-publish_mode: editorial_workflow
+  name: "git-gateway"
+  branch: "master"
+media_folder: "public/images"
+public_folder: "/images"
+publish_mode: "editorial_workflow"
 
 collections:
   - name: "config"
     label: "Config"
-    delete: false
+    delete: "false"
     editor:
-      preview: false
+      preview: "false"
     files:
       - name: "general"
         label: "Site Config"
@@ -32,8 +32,8 @@ collections:
             widget: "list"
             summary: "{{fields.keyword.keyword}}"
             field:
-              label: Keyword
-              name: keyword
+              label: "Keyword"
+              name: "keyword"
               widget: "string"
           - label: "Twitter account"
             name: "twitter_account"
@@ -44,19 +44,19 @@ collections:
 
   - name: "meta"
     label: "Meta"
-    delete: false
+    delete: "false"
     editor:
-      preview: false
+      preview: "false"
     files:
       - name: "authors"
         label: "Authors"
         file: "meta/authors.yml"
         description: "Author descriptions"
         fields:
-          - name: authors
-            label: Authors
+          - name: "authors"
+            label: "Authors"
             label_singular: "Author"
-            widget: list
+            widget: "list"
             fields:
               - label: "Slug"
                 name: "slug"
@@ -74,10 +74,10 @@ collections:
         file: "meta/tags.yml"
         description: "List of tags"
         fields:
-          - name: tags
-            label: Tags
+          - name: "tags"
+            label: "Tags"
             label_singular: "Tag"
-            widget: list
+            widget: "list"
             fields:
               - label: "Slug"
                 name: "slug"
@@ -93,9 +93,9 @@ collections:
     folder: "src/pages/posts"
     extension: "mdx"
     format: "frontmatter"
-    create: true
+    create: "true"
     slug: "{{slug}}"
-    identifier_field: slug
+    identifier_field: "slug"
     summary: "{{title}}"
     fields:
       - label: "Slug"
@@ -109,10 +109,10 @@ collections:
         widget: "datetime"
         format: "YYYY-MM-DD"
         dateFormat: "YYYY-MM-DD"
-        timeFormat: false
-      - label: Author
+        timeFormat: "false"
+      - label: "Author"
         name: "author"
-        widget: relation
+        widget: "relation"
         collection: "meta"
         file: "authors"
         searchFields:
@@ -120,15 +120,15 @@ collections:
         displayFields:
           - "authors.*.name"
         valueField: "authors.*.slug"
-      - label: Tags
+      - label: "Tags"
         label_singular: "Tag"
         name: "tags"
-        widget: list
+        widget: "list"
         summary: "{{fields.tag}}"
         field:
-          label: Tag
-          name: tag
-          widget: relation
+          label: "Tag"
+          name: "tag"
+          widget: "relation"
           collection: "meta"
           file: "tags"
           searchFields:

@@ -3,9 +3,15 @@
   "site_title": "plau",
   "site_description": "Personal site",
   "site_keywords": [
-    "Programming",
-    "Gaming",
-    "React",
+    {
+      "keyword": "Programming"
+    },
+    {
+      "keyword": "Gaming"
+    },
+    {
+      "keyword": "React"
+    },
     {
       "keyword": "Next.js"
     },
@@ -13,7 +19,7 @@
       "keyword": "Netlify"
     }
   ],
-  "og_image": "og_image.jpg",
+  "site_image": "og_image.jpg",
   "posts_per_page": 5,
   "twitter_account": "@LauPanhavuth",
   "github_account": "p-lau"
