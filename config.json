@@ -3,21 +3,11 @@
   "site_title": "plau",
   "site_description": "Personal site",
   "site_keywords": [
-    {
-      "keyword": "Programming"
-    },
-    {
-      "keyword": "Gaming"
-    },
-    {
-      "keyword": "React"
-    },
-    {
-      "keyword": "Next.js"
-    },
-    {
-      "keyword": "Netlify"
-    }
+    "Programming",
+    "Gaming",
+    "React",
+    "Next.js",
+    "Netlify"
   ],
   "site_image": "og_image.jpg",
   "posts_per_page": 5,
