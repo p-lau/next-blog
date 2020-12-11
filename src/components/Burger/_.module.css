@@ -1,5 +1,9 @@
 /* Burger */
 .burger {
+    user-select: none;
+    backdrop-filter: blur(0.5rem);
+    padding: 0.5rem;
+    border-radius: 50%;
     position: fixed;
     width: 38px;
     height: 38px;
