@@ -139,7 +139,7 @@ collections:
       - label: "Preview"
         name: "preview"
         widget: "image"
-        allow_multiple: "false"
+        allow_multiple: false
         default: ""
       - label: "Body"
         name: "body"
