@@ -19,7 +19,7 @@ export default function OpenGraphMeta({
 			<meta property="og:url" content={config.base_url + url} />
 			<meta
 				property="og:title"
-				content={title ? [title, config.site_title].join(" | ") : ""}
+				content={title ? [title, config.site_title].join(" | ") : config.site_title}
 			/>
 			<meta
 				property="og:description"
