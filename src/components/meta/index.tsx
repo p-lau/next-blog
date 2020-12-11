@@ -10,7 +10,7 @@ type Props = {
 	image?: string
 	keywords?: string[]
 	author?: string
-	date: Date
+	date?: Date
 }
 
 export default function Meta({url, title, description, image, keywords, author, date}: Props){
