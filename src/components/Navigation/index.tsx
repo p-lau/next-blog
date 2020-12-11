@@ -41,7 +41,7 @@ export default function Navigation() {
 					<li>
 						<Link href="/posts/tags/art">
 							<a className={pathname.endsWith("/art") ? navActive : null}>
-								Games
+								Art
 							</a>
 						</Link>
 					</li>
