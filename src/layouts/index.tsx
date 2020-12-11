@@ -41,7 +41,7 @@ export default function Index({
 					date={date}
 					author={authorName}
 					image={preview}
-					description={description || content.substr(0, 50)}
+					description={description}
 				/>
 				<div className={"container"}>
 					<article>

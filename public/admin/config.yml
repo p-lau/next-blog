@@ -141,6 +141,9 @@ collections:
         widget: "image"
         allow_multiple: false
         default: ""
+      - label: "Description"
+        name: "description"
+        widget: "string"
       - label: "Body"
         name: "body"
         widget: "markdown"
