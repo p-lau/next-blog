@@ -24,7 +24,7 @@ export default function TwitterCardMeta({ url, title, description, image }: Prop
 			/>
 			<meta
 				property="twitter:image"
-				content={image ? image : config.base_url + "/" + config.site_image}
+				content={`${config.base_url}/${image ? image : config.site_image}`}
 			/>
 		</Head>
 	)
