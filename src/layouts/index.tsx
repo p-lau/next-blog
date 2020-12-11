@@ -1,11 +1,10 @@
-
 import React from "react"
 import styles from "../../public/styles/content.module.css"
 import Author from "../components/Author"
 import Copyright from "../components/Copyright"
 import Date from "../components/Date"
 import Layout from "../components/Layout"
-import {Basic, Open, Twitter, Json} from "../components/meta"
+import Meta from "../components/meta"
 import SocialList from "../components/Social/List"
 import TagButton from "../components/Tag/Button"
 import { getAuthor } from "../lib/authors"
@@ -33,23 +32,7 @@ export default function Index({
 	return ({ children: content }) => {
 		return (
 			<Layout>
-				<Basic
-					url={`/posts/${slug}`}
-					title={title}
-					keywords={keywords}
-					description={description}
-				/>
-				<Twitter
-					url={`/posts/${slug}`}
-					title={title}
-					description={description}
-				/>
-				<Open
-					url={`/posts/${slug}`}
-					title={title}
-					description={description}
-				/>
-				<Json
+				<Meta
 					url={`/posts/${slug}`}
 					title={title}
 					keywords={keywords}

@@ -1,6 +1,6 @@
 import { GetStaticProps } from "next"
 import Layout from "../../components/Layout"
-import {Basic, Twitter, Open} from "../../components/meta"
+import Meta from "../../components/meta"
 import PostList from "../../components/Post/List"
 import config from "../../lib/config"
 import { countPosts, listPostContent, PostContent } from "../../lib/posts"
@@ -19,9 +19,7 @@ export default function Index({ posts, tags, pagination }: Props) {
   const title = "All posts"
   return (
     <Layout>
-      <Basic url={url} title={title} />
-      <Open url={url} title={title} />
-      <Twitter url={url} title={title} />
+      <Meta url={url} title={title} />
       <PostList list={posts} tags={tags} pagination={pagination} />
     </Layout>
   );

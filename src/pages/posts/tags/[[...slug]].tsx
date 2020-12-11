@@ -1,6 +1,6 @@
 import { GetStaticPaths, GetStaticProps } from "next"
 import Layout from "../../../components/Layout"
-import {Basic, Twitter, Open} from "../../../components/meta"
+import Meta from "../../../components/meta"
 import TagPostList from "../../../components/Tag/PostList"
 import config from "../../../lib/config"
 import { countPosts, listPostContent, PostContent } from "../../../lib/posts"
@@ -21,9 +21,7 @@ export default function Index({ posts, tag, pagination, page }: Props) {
   const title = tag.name
   return (
     <Layout>
-      <Basic url={url} title={title} />
-      <Open url={url} title={title} />
-      <Twitter url={url} title={title} />
+      <Meta url={url} title={title} />
       <TagPostList posts={posts} tag={tag} pagination={pagination} />
     </Layout>
   );

@@ -3,6 +3,7 @@ type Props = [boolean, ()=> void]
 
 const Context = createContext<Props>([true, function(){}])
 
+export const useTheme = () => useContext(Context)
 export default function ThemeContext({children}){
 	const [theme, setTheme] = useState(true)
 	const toggleTheme = () => setTheme(!theme)
@@ -11,8 +12,4 @@ export default function ThemeContext({children}){
 			{children}
 		</Context.Provider>
 	)
-}
-
-export const useTheme = () =>{
-	return useContext(Context)
 }
