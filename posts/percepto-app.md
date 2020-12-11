@@ -7,11 +7,11 @@ tags:
   - tech
   - react
   - projects
-preview: /images/the_tingler_t800.jpg
+preview: https://res.cloudinary.com/plau/image/upload/v1607730902/plau/The_Tingler_t800_wclt34.jpg
 description: The Tingler was a horror sensation... now will it come back into
   the modern world?
 ---
-![The Tingler Promotion](/images/the_tingler_t800.jpg "The Tingler")
+![The Tingler Promotion](https://res.cloudinary.com/plau/image/upload/v1607730902/plau/The_Tingler_t800_wclt34.jpg "The Tingler")
 
 # The Tingler App Development
 
