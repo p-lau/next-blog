@@ -1,26 +1,23 @@
-const withMdxEnhanced = require("next-mdx-enhanced");
-const rehypePrism = require("@mapbox/rehype-prism");
+const withMDX = require('@next/mdx')({
+    extension: /\.mdx?$/
+})
 
-module.exports = withMdxEnhanced({
-  layoutPath: "src/layouts",
-  defaultLayout: true,
-  rehypePlugins: [rehypePrism],
-})({
-  pageExtensions: ["mdx", "tsx"],
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+module.exports = withMDX({
+    pageExtensions: ['js', 'jsx', "md", "mdx", "tsx", "ts"],
+    webpack: (config) => {
     config.module.rules.push(
-      ...[
+        ...[
         {
-          test: /\.yml$/,
-          type: "json",
-          use: "yaml-loader",
+            test: /\.yml$/,
+            type: "json",
+            use: "yaml-loader",
         },
         {
-          test: /\.svg$/,
-          use: "@svgr/webpack",
+            test: /\.svg$/,
+            use: "@svgr/webpack",
         },
-      ]
-    );
-    return config;
-  },
-});
+        ]
+    )
+    return config
+    },
+})

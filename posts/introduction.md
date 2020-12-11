@@ -5,6 +5,8 @@ date: 2020-12-10
 author: plau
 tags:
   - personal
+preview: /images/profile.jpg
+description: My cat is wonderful
 ---
 ![Panhavuth Lau](/images/profile.jpg "Panhavuth Lau")
 

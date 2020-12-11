@@ -90,8 +90,8 @@ collections:
 
   - name: "posts"
     label: "Posts"
-    folder: "src/pages/posts"
-    extension: "mdx"
+    folder: "posts"
+    extension: "md"
     format: "frontmatter"
     create: true
     slug: "{{slug}}"

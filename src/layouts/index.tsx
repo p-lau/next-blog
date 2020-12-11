@@ -1,4 +1,3 @@
-import React from "react"
 import styles from "../../public/styles/content.module.css"
 import Author from "../components/Author"
 import Copyright from "../components/Copyright"
@@ -29,8 +28,8 @@ export default function Index({
 	preview,
 	description,
 }: Props) {
-	const keywords = tags.map((it) => getTag(it).name);
-	const authorName = getAuthor(author).name;
+	const keywords = tags.map((it) => getTag(it).name)
+	const authorName = getAuthor(author).name
 	return ({ children: content }) => {
 		return (
 			<Layout>
