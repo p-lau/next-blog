@@ -34,14 +34,9 @@
 }
 
 .categories {
-    display: none;
+    display: block;
 }
 .categories > li {
     list-style: none;
     margin-bottom: 0.75em;
-}
-@media (orientation: landscape) {
-    .categories {
-        display: block;
-    }
 }
