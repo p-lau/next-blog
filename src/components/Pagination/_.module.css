@@ -4,13 +4,13 @@
     margin: 3rem 0 0 0 !important;
     padding: 0 !important;
 }
-.pag li {
+.pag > li {
     display: inline-block;
     margin-right: 1em;
-    color: #9b9b9b;
+    color: var(--inactive);
     font-size: 1.25rem;
 }
 .pagActive {
-    color: #222;
+    color: var(--active);
     font-weight: bold;
 }

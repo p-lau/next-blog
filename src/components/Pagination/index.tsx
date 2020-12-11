@@ -16,18 +16,20 @@ const {pag, pagActive} = styles
 export default function Pagination({ current, pages, link }: Props) {
 	const pagination = generatePagination(current, pages)
 	return (
-		<ul className={pag}>
-			{pagination.map(({excerpt, page}, i) => (
-				<li key={i}>
-					{excerpt ? (
-						"..."
-					) : (
-						<Link href={link.href(page)} as={link.as(page)}>
-							<a className={page === current ? pagActive : null}>{page}</a>
-						</Link>
-					)}
-				</li>
-			))}
-		</ul>
+		<div>
+			<ul className={pag}>
+				{pagination.map(({excerpt, page}, i) => (
+					<li key={i}>
+						{excerpt ? (
+							"..."
+						) : (
+							<Link href={link.href(page)} as={link.as(page)}>
+								<a className={page === current ? pagActive : null}>{page}</a>
+							</Link>
+						)}
+					</li>
+				))}
+			</ul>
+		</div>
 	)
 }
