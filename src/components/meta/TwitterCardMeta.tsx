@@ -4,10 +4,11 @@ import Head from "next/head"
 type Props = {
 	url: string
 	title?: string
+	image?: string
 	description?: string
 }
 
-export default function TwitterCardMeta({ url, title, description }: Props) {
+export default function TwitterCardMeta({ url, title, description, image }: Props) {
 	return (
 		<Head>
 			<meta property="twitter:card" content="summary_large_image" />
@@ -20,6 +21,10 @@ export default function TwitterCardMeta({ url, title, description }: Props) {
 			<meta
 				property="twitter:description"
 				content={description ? description : config.site_description}
+			/>
+			<meta
+				property="twitter:image"
+				content={config.base_url + image || config.og_image}
 			/>
 		</Head>
 	)

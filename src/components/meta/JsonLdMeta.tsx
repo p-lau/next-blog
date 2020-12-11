@@ -33,7 +33,7 @@ export default function JsonLdMeta({
 					keywords: keywords ? keywords.join(",") : undefined,
 					datePublished: date ? formatISO(date) : undefined,
 					author: author,
-					image: image,
+					image: image ? config.base_url + image : undefined,
 					description: description,
 				})}
 			/>
