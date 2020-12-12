@@ -10,7 +10,8 @@ const {nav, navActive, theme} = styles
 export default function Navigation() {
 	const [dark, toggle] = useTheme()
 
-	const { pathname } = useRouter()
+	const { pathname, query } = useRouter()
+	console.log(pathname, query)
 	const [active, setActive] = useState(false);
 	return (
 		<>
@@ -26,35 +27,35 @@ export default function Navigation() {
 					</li>
 					<li>
 						<Link href="/posts">
-							<a className={pathname.endsWith("/posts") ? navActive : null}>
+							<a className={pathname === "/posts" ? navActive : null}>
 								All
 							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href="/posts/tags/projects">
-							<a className={pathname.endsWith("/projects") ? navActive : null}>
+							<a className={query?.slug?.[0] === "projects" ? navActive : null}>
 								Projects
 							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href="/posts/tags/art">
-							<a className={pathname.endsWith("/art") ? navActive : null}>
+							<a className={query?.slug?.[0] === "art" ? navActive : null}>
 								Art
 							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href="/posts/tags/tech">
-							<a className={pathname.endsWith("/technology") ? navActive : null}>
+							<a className={query?.slug?.[0] === "tech" ? navActive : null}>
 								Tech
 							</a>
 						</Link>
 					</li>
 					<li>
 						<Link href="/posts/tags/gaming">
-							<a className={pathname.endsWith("/gaming") ? navActive : null}>
+							<a className={query?.slug?.[0] === "gaming" ? navActive : null}>
 								Games
 							</a>
 						</Link>
