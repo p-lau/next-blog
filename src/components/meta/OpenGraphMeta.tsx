@@ -7,27 +7,31 @@ type Props = {
 	description?: string
 	image?: string
 }
+
+const { base_url, site_title, site_image, site_description } = config
+
 export default function OpenGraphMeta({
 	url,
 	title,
 	description,
 	image,
 }: Props) {
+
 	return (
 		<Head>
-			<meta property="og:site_name" content={config.site_title} />
-			<meta property="og:url" content={config.base_url + url} />
+			<meta property="og:site_name" content={site_title} />
+			<meta property="og:url" content={base_url + url} />
 			<meta
 				property="og:title"
-				content={title ? [title, config.site_title].join(" | ") : config.site_title}
+				content={title ? [title, site_title].join(" | ") : site_title}
 			/>
 			<meta
 				property="og:description"
-				content={description ? description : config.site_description}
+				content={description ? description : site_description}
 			/>
 			<meta
 				property="og:image"
-				content={`${config.base_url}/${image ? image : config.site_image}`}
+				content={image ? image : base_url+site_image}
 			/>
 			<meta property="og:type" content="article" />
 		</Head>
