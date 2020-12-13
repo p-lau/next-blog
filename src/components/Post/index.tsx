@@ -36,7 +36,7 @@ export default function Post({
 	return (
 		<Layout>
 			<Meta
-				url={`posts/${slug}`}
+				url={`/posts/${slug}`}
 				title={title}
 				keywords={keywords}
 				date={ISODate}

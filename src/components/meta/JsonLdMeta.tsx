@@ -37,7 +37,7 @@ export default function JsonLdMeta({
 					keywords: (keywords ? keywords : site_keywords).join(","),
 					datePublished: date ? formatISO(date) : formatISO(new Date()),
 					author: author,
-					image: image ? image : base_url+site_image,
+					image: image ? image : [base_url,site_image].join("/"),
 					description: description,
 				})}
 			/>

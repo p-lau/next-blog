@@ -10,7 +10,7 @@ const {nav, navActive, theme} = styles
 const paths = {
 	"/": "Panhavuth Lau",
 	"/posts": "All",
-	"/posts/tags/projects": "Projects",
+	"/posts/tags/project": "Project",
 	"/posts/tags/art": "Art",
 	"/posts/tags/tech": "Tech",
 	"/posts/tags/gaming": "Gaming"

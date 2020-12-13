@@ -31,9 +31,9 @@ export default function OpenGraphMeta({
 			/>
 			<meta
 				property="og:image"
-				content={image ? image : base_url+site_image}
+				content={image ? image : [base_url,site_image].join("/")}
 			/>
-			<meta property="og:type" content="article" />
+			<meta property="og:type" content="article" key="type"/>
 		</Head>
 	)
 }

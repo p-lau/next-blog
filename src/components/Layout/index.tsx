@@ -24,7 +24,7 @@ export default function Layout({ children }: Props) {
 				<link rel="mask-icon" color="#223344"/>
 				<link rel="manifest" href={`/site.webmanifest`}/>
 				<meta name="theme-color" content="#001122"/>
-				<meta property="og:type" content="website" key={"type"}/>
+				<meta property="og:type" content="website" key="type"/>
 			</Head>
 			<nav>
 				<Navigation />
