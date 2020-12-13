@@ -1,9 +1,14 @@
 const withMDX = require('@next/mdx')({
     extension: /\.mdx?$/
 })
+const withPWA = require('next-pwa')
 
-module.exports = withMDX({
+module.exports = withPWA(withMDX({
     pageExtensions: ['js', 'jsx', "md", "mdx", "tsx", "ts"],
+    pwa: {
+        disable: process.env.NODE_ENV === 'development',
+        dest: 'public'
+    },
     webpack: (config) => {
     config.module.rules.push(
         ...[
@@ -20,4 +25,4 @@ module.exports = withMDX({
     )
     return config
     },
-})
+}))
