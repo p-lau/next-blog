@@ -19,7 +19,6 @@ const paths = {
 export default function Navigation() {
 	const [dark, toggle] = useTheme()
 	const { asPath: pathname } = useRouter()
-	console.log(pathname)
 	const [active, setActive] = useState(false)
 	return (
 		<>
