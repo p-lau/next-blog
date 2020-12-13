@@ -9,9 +9,7 @@ const {nav, navActive, theme} = styles
 
 export default function Navigation() {
 	const [dark, toggle] = useTheme()
-
 	const { pathname, query } = useRouter()
-	console.log(pathname, query)
 	const [active, setActive] = useState(false);
 	return (
 		<>
