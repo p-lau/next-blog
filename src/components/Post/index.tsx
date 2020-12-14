@@ -59,7 +59,7 @@ export default function Post({
 					</header>
 					<div className={styles.content} dangerouslySetInnerHTML={{__html: content}}/>
 					<ul className={styles.tagList}>
-						{tags.map((it, i) => (
+						{tags.sort((a,b) => a > b ? 1 : -1).map((it, i) => (
 							<li key={i}>
 								<TagButton tag={getTag(it)} />
 							</li>

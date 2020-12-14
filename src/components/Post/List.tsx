@@ -36,7 +36,7 @@ export default function PostList({ list, tags, pagination }: Props) {
 				/>
 			</div>
 			<ul className={categories}>
-				{tags.sort((a,b)=> a.name < b.name ? -1 : 1).map((it, i) => (
+				{tags.sort((a,b)=> a.name > b.name ? 1 : -1).map((it, i) => (
 					<li key={i}>
 						<TagLink tag={it} />
 					</li>
